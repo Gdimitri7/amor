@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "amor",
+    "name": "amorr",
     "slug": "amor",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -42,8 +42,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "b0e2ca86-dee4-41a5-915c-f8dc045611f3"
+        "projectId": "4c0c4b0c-a1d3-433f-95ae-3cef397988b2"
       }
-    }
+    },
+    "owner": "gd.dimitri-org"
   }
 }
