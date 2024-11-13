@@ -1,6 +1,11 @@
 import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 
+type TabParamList = {
+  index: undefined;
+  about: undefined;
+};
 
 export default function TabLayout() {
   return (
@@ -13,7 +18,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ color, focused }: { color: string, focused: boolean }) => (
             <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
           ),
         }}
@@ -22,12 +27,11 @@ export default function TabLayout() {
         name="about"
         options={{
           title: 'About',
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ color, focused }: { color: string, focused: boolean }) => (
             <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
           ),
         }}
       />
     </Tabs>
-    
   );
 }
