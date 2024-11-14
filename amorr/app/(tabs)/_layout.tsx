@@ -1,35 +1,69 @@
-import { Tabs } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
-
-type TabParamList = {
-  index: undefined;
-  about: undefined;
-};
+import { Tabs } from "expo-router";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import Entypo from "@expo/vector-icons/Entypo";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#ffd33d',
+        tabBarActiveTintColor: "#ffd33d",
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }: { color: string, focused: boolean }) => (
-            <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
+          title: "Bem-vinda! Amor",
+          tabBarIcon: ({
+            color,
+            focused,
+          }: {
+            color: string;
+            focused: boolean;
+          }) => (
+            <Ionicons
+              name={focused ? "heart" : "heart-outline"}
+              color={color}
+              size={24}
+            />
           ),
+          headerShown: false,
         }}
       />
       <Tabs.Screen
+        name="menu"
+        options={{
+          title: "menu",
+
+          tabBarIcon: ({
+            color,
+            focused,
+          }: {
+            color: string;
+            focused: boolean;
+          }) => <Entypo name="500px-with-circle" size={24} color="black" />,
+          headerShown: false,
+        }}
+      />
+
+      <Tabs.Screen
         name="about"
         options={{
-          title: 'About',
-          tabBarIcon: ({ color, focused }: { color: string, focused: boolean }) => (
-            <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
+          title: "Sobre Nós",
+          tabBarIcon: ({
+            color,
+            focused,
+          }: {
+            color: string;
+            focused: boolean;
+          }) => (
+            <MaterialCommunityIcons
+              name="robot-love-outline"
+              size={24}
+              color={color}
+            />
           ),
+          headerShown: false,
         }}
       />
     </Tabs>
