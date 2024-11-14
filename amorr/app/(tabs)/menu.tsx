@@ -1,102 +1,207 @@
-import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet, ScrollView, ImageBackground } from 'react-native';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  ScrollView,
+  ImageBackground,
+  Modal,
+  Image,
+  TouchableOpacity,
+
+} from "react-native";
+import { Video } from 'expo-av';
 
 export default function Menu() {
-  // Estado para controlar qual seção está visível
-  const [currentPage, setCurrentPage] = useState('home'); // Valor inicial é 'home'
+  const [currentPage, setCurrentPage] = useState("home");
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  // Função para alternar entre as páginas
-  const navigateTo = (page: string) => {
+  const navigateTo = (page) => {
     setCurrentPage(page);
+  };
+  
+  const video = require("../assets/sp.mp4");
+
+  const images = [
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+    require("../assets/foto-de-fundo.jpg"),
+  ];
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+    setSelectedImage(null);
   };
 
   return (
     <ImageBackground
-      source={require('../assets/foto-de-fundo.jpg')} // Coloque o caminho correto da imagem de fundo
+      source={require("../assets/foto-de-fundo.jpg")}
       style={styles.container}
     >
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        {/* Título principal */}
         <Text style={styles.headerTitle}>Eu e Você</Text>
 
-        {/* Header ou Menu - Botões fixos */}
         <View style={styles.header}>
           <View style={styles.buttonContainer}>
-            <Button title="Maiores Saudades" onPress={() => navigateTo('maioresSaudades')} />
+            <Button
+              title="Maiores Saudades"
+              onPress={() => navigateTo("maioresSaudades")}
+            />
           </View>
           <View style={styles.buttonContainer}>
-            <Button title="Nossas Viagens" onPress={() => navigateTo('viagens')} />
+            <Button
+              title="Nossas Viagens"
+              onPress={() => navigateTo("viagens")}
+            />
           </View>
           <View style={styles.buttonContainer}>
-            <Button title="Nossas Músicas" onPress={() => navigateTo('musicas')} />
+            <Button
+              title="Nossas Músicas"
+              onPress={() => navigateTo("musicas")}
+            />
           </View>
           <View style={styles.buttonContainer}>
-            <Button title="Momentos Especiais" onPress={() => navigateTo('momentos')} />
+            <Button
+              title="Momentos Especiais"
+              onPress={() => navigateTo("momentos")}
+            />
           </View>
           <View style={styles.buttonContainer}>
-            <Button title="Nosso Futuro Juntos" onPress={() => navigateTo('futuro')} />
+            <Button
+              title="Nosso Futuro Juntos"
+              onPress={() => navigateTo("futuro")}
+            />
           </View>
           <View style={styles.buttonContainer}>
-            <Button title="Fotos e Lembranças" onPress={() => navigateTo('fotos')} />
+            <Button
+              title="Fotos e Lembranças"
+              onPress={() => navigateTo("fotos")}
+            />
           </View>
         </View>
 
-        {/* Página Home */}
-        {currentPage === 'home' && (
-          <View style={styles.page}>
-            <Text style={styles.title}>Bem-vinda ao Menu, amor!</Text>
-            <Text style={styles.text}>Escolha uma das opções acima para começar.</Text>
-          </View>
-        )}
-
-        {/* Outras páginas... */}
         {/* Página Maiores Saudades */}
-        {currentPage === 'maioresSaudades' && (
+        {currentPage === "maioresSaudades" && (
           <View style={styles.page}>
             <Text style={styles.title}>Maiores Saudades</Text>
-            <Text style={styles.text}>Aqui estão as nossas maiores saudades...</Text>
+            <Text style={styles.text}>
+              Clique em um dos momentos abaixo para ver a foto:
+            </Text>
+            <View style={styles.buttonsGrid}>
+              {images.map((image, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.photoButton}
+                  onPress={() => openModal(image)}
+                >
+                  <Text style={styles.buttonText}>Momento {index + 1}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
           </View>
         )}
 
         {/* Página Nossas Viagens */}
-        {currentPage === 'viagens' && (
+        {currentPage === "viagens" && (
           <View style={styles.page}>
             <Text style={styles.title}>Nossas Viagens</Text>
-            <Text style={styles.text}>Aqui estão os países que já visitamos...</Text>
+            <Text style={styles.text}>
+              Aqui estão nossas viagens passadas e futuras.
+            </Text>
+            <View style={styles.buttonsGrid}>
+              {/* Adicione o conteúdo para a seção 'Nossas Viagens' */}
+            </View>
           </View>
         )}
 
         {/* Página Nossas Músicas */}
-        {currentPage === 'musicas' && (
+        {currentPage === "musicas" && (
           <View style={styles.page}>
             <Text style={styles.title}>Nossas Músicas</Text>
-            <Text style={styles.text}>Aqui estão as músicas que mais amamos ouvir juntos...</Text>
+            <Text style={styles.text}>
+              Essas são as músicas que marcam nossa história.
+            </Text>
+            <View style={styles.buttonsGrid}>
+              {/* Adicione o conteúdo para a seção 'Nossas Músicas' */}
+            </View>
           </View>
         )}
 
         {/* Página Momentos Especiais */}
-        {currentPage === 'momentos' && (
+        {currentPage === "momentos" && (
           <View style={styles.page}>
             <Text style={styles.title}>Momentos Especiais</Text>
-            <Text style={styles.text}>Aqui estão alguns dos nossos momentos mais especiais...</Text>
+            <Text style={styles.text}>
+              Aqui estão os momentos que definem nossa relação.
+            </Text>
+            <View style={styles.buttonsGrid}>
+              {/* Adicione o conteúdo para a seção 'Momentos Especiais' */}
+            </View>
           </View>
         )}
 
         {/* Página Nosso Futuro Juntos */}
-        {currentPage === 'futuro' && (
+        {currentPage === "futuro" && (
           <View style={styles.page}>
             <Text style={styles.title}>Nosso Futuro Juntos</Text>
-            <Text style={styles.text}>Aqui estão os planos para o nosso futuro juntos...</Text>
+            <Text style={styles.text}>
+              Vamos compartilhar nossos planos para o futuro.
+            </Text>
+            <View style={styles.buttonsGrid}>
+              {/* Adicione o conteúdo para a seção 'Nosso Futuro Juntos' */}
+            </View>
           </View>
         )}
 
         {/* Página Fotos e Lembranças */}
-        {currentPage === 'fotos' && (
+        {currentPage === "fotos" && (
           <View style={styles.page}>
             <Text style={styles.title}>Fotos e Lembranças</Text>
-            <Text style={styles.text}>Aqui estão algumas fotos e lembranças especiais...</Text>
+            <Text style={styles.text}>
+              Veja as fotos que capturam nossos melhores momentos.
+            </Text>
+            <View style={styles.buttonsGrid}>
+              {/* Adicione o conteúdo para a seção 'Fotos e Lembranças' */}
+            </View>
           </View>
         )}
+
+        {/* Modal para exibir a foto */}
+        <Modal
+          transparent={true}
+          visible={isModalVisible}
+          onRequestClose={closeModal}
+        >
+          <View style={styles.modalOverlay}>
+            <View style={styles.modalContent}>
+              {selectedImage && (
+                <Image source={selectedImage} style={styles.modalImage} />
+              )}
+              <Button
+                title="Fechar"
+                onPress={closeModal}
+                color="#ff69b4"
+                style={styles.closeButton}
+              />
+            </View>
+          </View>
+        </Modal>
       </ScrollView>
     </ImageBackground>
   );
@@ -105,41 +210,98 @@ export default function Menu() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Um pouco de transparência para dar contraste à imagem de fundo
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
   scrollContainer: {
     padding: 20,
   },
   headerTitle: {
     fontSize: 36,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold",
+    textAlign: "center",
     marginVertical: 20,
-    color: '#ff69b4',
+    color: "#ff69b4",
   },
   header: {
-    flexDirection: 'column',
-    justifyContent: 'center',
+    flexDirection: "column",
+    justifyContent: "center",
     marginBottom: 20,
   },
   buttonContainer: {
-    marginVertical: 10, // Espaço entre os botões
+    marginVertical: 10,
     borderRadius: 10,
-    overflow: 'hidden',
-    backgroundColor: '#ff69b4', // Cor de fundo dos botões
+    overflow: "hidden",
+    backgroundColor: "#ff69b4",
   },
   page: {
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 30,
   },
   title: {
     fontSize: 28,
-    fontWeight: 'bold',
-    color: '#ff69b4',
+    fontWeight: "bold",
+    color: "#ff69b4",
   },
   text: {
     fontSize: 18,
-    color: '#fff', // Branco para contraste com o fundo
+    color: "#fff",
     marginTop: 10,
+    textAlign: "center",
+  },
+  buttonsGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    marginTop: 20,
+  },
+  photoButton: {
+    width: 120,
+    height: 40,
+    backgroundColor: "#ff69b4",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 10,
+    borderRadius: 10,
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold",
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalContent: {
+    width: 300,
+    height: 400,
+    backgroundColor: "#ffdde1", // Cor suave para efeito romântico
+    borderRadius: 10,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: "#ff69b4",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.8,
+    shadowRadius: 4,
+    elevation: 5, // Sombra para dar mais profundidade
+  },
+  modalImage: {
+    width: "100%",
+    height: "80%",
+    borderRadius: 10,
+    marginBottom: 20, // Espaço entre a imagem e o botão
+  },
+  closeButton: {
+    marginTop: 20, // Espaço entre o botão e a imagem
+    borderColor: "#ff69b4",
+    borderWidth: 2,
+    borderRadius: 5,
   },
 });
