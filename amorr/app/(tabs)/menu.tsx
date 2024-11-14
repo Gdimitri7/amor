@@ -9,7 +9,6 @@ import {
   Modal,
   Image,
   TouchableOpacity,
-
 } from "react-native";
 import { Video } from 'expo-av';
 
@@ -17,36 +16,36 @@ export default function Menu() {
   const [currentPage, setCurrentPage] = useState("home");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   const navigateTo = (page) => {
     setCurrentPage(page);
   };
-  
-  const video = require("../assets/sp.mp4");
+
+  const video = require("../assets/sp.mp4"); // Caminho para o vídeo
 
   const images = [
     require("../assets/foto-de-fundo.jpg"),
     require("../assets/foto-de-fundo.jpg"),
     require("../assets/foto-de-fundo.jpg"),
     require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
-    require("../assets/foto-de-fundo.jpg"),
   ];
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const openModal = (item, type) => {
+    if (type === 'image') {
+      setSelectedImage(item);
+      setSelectedVideo(null);
+    } else if (type === 'video') {
+      setSelectedVideo(item);
+      setSelectedImage(null);
+    }
     setIsModalVisible(true);
   };
 
   const closeModal = () => {
     setIsModalVisible(false);
     setSelectedImage(null);
+    setSelectedVideo(null);
   };
 
   return (
@@ -101,18 +100,24 @@ export default function Menu() {
           <View style={styles.page}>
             <Text style={styles.title}>Maiores Saudades</Text>
             <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto:
+              Clique em um dos momentos abaixo para ver a foto ou vídeo:
             </Text>
             <View style={styles.buttonsGrid}>
               {images.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image)}
+                  onPress={() => openModal(image, 'image')}
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
               ))}
+              <TouchableOpacity
+                style={styles.photoButton}
+                onPress={() => openModal(video, 'video')}
+              >
+                <Text style={styles.buttonText}>Ver Vídeo Especial</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -121,11 +126,18 @@ export default function Menu() {
         {currentPage === "viagens" && (
           <View style={styles.page}>
             <Text style={styles.title}>Nossas Viagens</Text>
-            <Text style={styles.text}>
-              Aqui estão nossas viagens passadas e futuras.
-            </Text>
+            <Text style={styles.text}>Aqui estão alguns dos nossos destinos:</Text>
+            {/* Adicione imagens de destinos visitados */}
             <View style={styles.buttonsGrid}>
-              {/* Adicione o conteúdo para a seção 'Nossas Viagens' */}
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Destino 1</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Destino 2</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Destino 3</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -134,11 +146,18 @@ export default function Menu() {
         {currentPage === "musicas" && (
           <View style={styles.page}>
             <Text style={styles.title}>Nossas Músicas</Text>
-            <Text style={styles.text}>
-              Essas são as músicas que marcam nossa história.
-            </Text>
+            <Text style={styles.text}>Aqui estão algumas das músicas que amamos:</Text>
+            {/* Adicione uma lista de músicas */}
             <View style={styles.buttonsGrid}>
-              {/* Adicione o conteúdo para a seção 'Nossas Músicas' */}
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Música 1</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Música 2</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Música 3</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -148,10 +167,19 @@ export default function Menu() {
           <View style={styles.page}>
             <Text style={styles.title}>Momentos Especiais</Text>
             <Text style={styles.text}>
-              Aqui estão os momentos que definem nossa relação.
+              Estes são os momentos que mais guardamos na memória:
             </Text>
+            {/* Adicione momentos especiais aqui */}
             <View style={styles.buttonsGrid}>
-              {/* Adicione o conteúdo para a seção 'Momentos Especiais' */}
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Momento 1</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Momento 2</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Momento 3</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -161,28 +189,24 @@ export default function Menu() {
           <View style={styles.page}>
             <Text style={styles.title}>Nosso Futuro Juntos</Text>
             <Text style={styles.text}>
-              Vamos compartilhar nossos planos para o futuro.
+              O que esperamos para o nosso futuro:
             </Text>
+            {/* Adicione previsões para o futuro aqui */}
             <View style={styles.buttonsGrid}>
-              {/* Adicione o conteúdo para a seção 'Nosso Futuro Juntos' */}
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Objetivo 1</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Objetivo 2</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.photoButton}>
+                <Text style={styles.buttonText}>Objetivo 3</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
 
-        {/* Página Fotos e Lembranças */}
-        {currentPage === "fotos" && (
-          <View style={styles.page}>
-            <Text style={styles.title}>Fotos e Lembranças</Text>
-            <Text style={styles.text}>
-              Veja as fotos que capturam nossos melhores momentos.
-            </Text>
-            <View style={styles.buttonsGrid}>
-              {/* Adicione o conteúdo para a seção 'Fotos e Lembranças' */}
-            </View>
-          </View>
-        )}
-
-        {/* Modal para exibir a foto */}
+        {/* Modal para exibir a foto ou vídeo */}
         <Modal
           transparent={true}
           visible={isModalVisible}
@@ -192,6 +216,15 @@ export default function Menu() {
             <View style={styles.modalContent}>
               {selectedImage && (
                 <Image source={selectedImage} style={styles.modalImage} />
+              )}
+              {selectedVideo && (
+                <Video
+                  source={selectedVideo}
+                  style={styles.modalVideo}
+                  shouldPlay
+                  resizeMode="contain"
+                  isLooping
+                />
               )}
               <Button
                 title="Fechar"
@@ -249,59 +282,44 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   buttonsGrid: {
+    marginTop: 20,
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    marginTop: 20,
   },
   photoButton: {
-    width: 120,
-    height: 40,
-    backgroundColor: "#ff69b4",
-    justifyContent: "center",
-    alignItems: "center",
     margin: 10,
+    padding: 10,
+    backgroundColor: "#ff69b4",
     borderRadius: 10,
   },
   buttonText: {
+    fontSize: 18,
     color: "#fff",
-    fontWeight: "bold",
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
   },
   modalContent: {
-    width: 300,
-    height: 400,
-    backgroundColor: "#ffdde1", // Cor suave para efeito romântico
-    borderRadius: 10,
-    padding: 20,
     alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "#ff69b4",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.8,
-    shadowRadius: 4,
-    elevation: 5, // Sombra para dar mais profundidade
+    backgroundColor: "#fff",
+    padding: 20,
+    borderRadius: 20,
   },
   modalImage: {
-    width: "100%",
-    height: "80%",
+    width: 300,
+    height: 300,
     borderRadius: 10,
-    marginBottom: 20, // Espaço entre a imagem e o botão
+  },
+  modalVideo: {
+    width: 300,
+    height: 300,
+    borderRadius: 10,
   },
   closeButton: {
-    marginTop: 20, // Espaço entre o botão e a imagem
-    borderColor: "#ff69b4",
-    borderWidth: 2,
-    borderRadius: 5,
+    marginTop: 20,
   },
 });
