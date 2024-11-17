@@ -71,9 +71,49 @@ export default function Menu() {
     require("../assets/maiores-saudades/sdd42.jpg"),
   ];
   const maioresSaudadesDescriptions = [
-    "Descrição do primeiro momento.",
-    "Lembrança do segundo momento.",
-    "Aqui estamos no terceiro momento.",
+    "Saudades de ir nadar com você, mesmo com a água geladaaa.",
+    "Saudades de receber beijinhos a todo momento.",
+    "Saudades de ir para a festa com você, mesmo que seja a pipokinha.",
+    "Saudades de quando ficarmavamos deitadinhas, jogando um brawl stars.",
+    "Saudades de jogar no pc um do ladin do outro ",
+    "Saudades de ir abastecer com você.",
+    "Saudades de receber fotinha sua com minha camisa.",
+    "Saudades de ir levar você para o parque.",
+    "Saudades de ver você dirigindo",
+    "Saudades de você com a cabeça no meu peito",
+    "Saudades de ficar coladin nu c",
+    "Saudades de receber um cafuné",
+    "Saudades de ir no ponto mais alto da bragancitê",
+    "Saudades de receber beijinhos no ponto mais alto da bragancitê",
+    "Saudades de sair em amigos com você ao meu lado",
+    "Saudades de sorrir assim com você",
+    "Saudades de botar você no meu peito, para dormir",
+    "Saudades de levar para conhecer o castelo.",
+    "Saudades de tirar foto de você.",
+    "Saudades de ficar de gracinha contigo.",
+    "Saudades de ver você admirando a vista.",
+    "Saudades de sair de camisa de time contigo.",
+    "Saudades de ver esse sorrisin colado no meu.",
+    "Saudades de receber esse beijao no pescoço",
+    "Saudades de tomar um solzin contigo.",
+    "Saudades de ir tomar sorvetin cu c",
+    "Saudades de tentar tirar um fotinha boa, quando era só nos dois.",
+    "Saudades de te v sorrindo assim.",
+    "Saudades de andar de mão dada com você.",
+    "Saudades de viajar contigo.",
+    "Saudades de limpar o carro e escutando música contigo.",
+    "Saudades de ir no azibo contigo.",
+    "Saudades de dar esse beijão na sua boca.",
+    "Saudades de dar esse beijin na sua boca",
+    "Saudades de ir na praia contigo.",
+    "Saudades de limpar o carro mais uma vez.",
+    "Saudades de ir ver os aviões contigo.",
+    "Saudades de ficar grudadin vendo os aviões contigo.",
+    "Saudades de beijando enquanto os aviões estavam voando.",
+    "Saudades de ir jantar com você.",
+    "Saudades de ir ver o por do sol contigo.",
+    "Saudades de sair com você.",
+
     // Adicione mais descrições conforme necessário
   ];
   const nossasViagensImages = [
@@ -115,10 +155,42 @@ export default function Menu() {
     require("../assets/viajando-juntos/trip36.jpg"),
   ];
   const nossasViagensDescriptions = [
-    "Descrição do destino 1.",
-    "Descrição do destino 2.",
-    "Descrição do destino 3.",
-    // Adicione mais descrições conforme necessário
+    "Aqui quando estava quase fazendo xixi e você me ajudouu. hihi",
+    "Já tinha feito né",
+    "Minutos antes do celular cair, e eu revelar que sou o homem aranha.",
+    "Saindo de Zamora a caminho de Salamanca.", 
+    "conhecendo a Plaza major de Salamanca",
+    "No hotel com a pessoa que mais amo no mundo.",
+    "Jantando en La Plaza Major",
+    "Minha preciosidade olhando a catedral de Salamanca",
+    "Grudadim com o meu amor",
+    "Uma criança queria passar na nossa foto, digaai",
+    "Coisa mais gostosa com minha camisa",
+    "Chegamos em Porto para o são joão",
+    "Eu doido para alugar um jetski pa nos",
+    "No Azibo, você com medinho de pular",
+    "Essa não é viagem mass, EU TE AMO TANTO",
+    "Vamos para o brFest, Figueria da Foz",
+    "Um gringo tirou foto pa nós",
+    "Com minha sereia ",
+    "Indo para a roda gigante com meu amor",
+    "Aqui eu ja tava com medoooo",
+    "Sempre de mão dada com meu amor",
+    "Nós cheio de amor",
+    "Trilha mais de 5km, pelo menos to agarradin com minha Princesa",
+    "Escutando a cachoeira e sua voz, eu te amo",
+    "Você é para sempre o Amor da minha vida",
+    "Sempre fazendo doideras e vc me acompanhando.",
+    "OLHAAA, hihihi",
+    "Aqui foi loucura, mais de 10km",
+    "Mas ao seu lado sempre estou com sorriso no rosto",
+    "Vale muito apena, tudo que for com você",
+    "Bota essa lingua pra fora dnv pu c v",
+    "Reptindo paraaa, amor c é gostosa ein, pqpppppp",
+    "Amo tirar foto sua.",
+    "Vamos pra Sanabria",
+    "Você com os peixinhoss",
+    "Momentos que vou guardar no meu coração pro resto da minha vida"
   ];
   const primeirosMomentosImages = [
     require("../assets/primeiros-momentos-juntos/fisrt2.jpg"),
@@ -132,9 +204,16 @@ export default function Menu() {
     require("../assets/primeiros-momentos-juntos/fisrt9.jpg"),
   ];
   const primeirosMomentosDescricoes = [
-    "Descrição do primeiro momento.",
-    "Descrição do segundo momento.",
-    "Descrição do terceiro momento.",
+    "Aqui está quando fomos ver nevinha e você com medo de ser sequestrada.",
+    "Quanndo fomos para o azibo e seu nome era suzana.",
+    "Aqui quando tudo ja foi revelado e ja passeamos em familia.",
+    "beijinhos e carinhos.",
+    "O dia que fomos comer churrins depois da aula, e ficamos de chameguin.",
+    "Saimos do carrin bate-bate e fomos comerrr.",
+    "Eita beijo gostoso ainda do dia de chameguin.",
+    "Que beijo gostoso que mais sinto falta no meu dia.",
+    "Primeiro dia você e eu jogandin no PC.",
+
     // Adicione mais descrições conforme necessário
   ];
 
@@ -151,6 +230,19 @@ export default function Menu() {
     require("../assets/momentos-maluquinhosss/mlq10.jpg"),
     require("../assets/momentos-maluquinhosss/mlq11.jpg"),
   ];
+  const momentosMalucosDescricoes = [
+    "Nós é parça, tlgd",
+    "Que beijooooo bommm",
+    "EITAN, QUE BUNDAOZAO",
+    "Cafugada no meu pescoço, fico todo todo.",
+    "Vamos catar, a fruta q esqueciiii o nome.",
+    "A cara do gajo.",
+    "Ficar de linguinha cu c",
+    "To parecendo um mendigoooo",
+    "Ocupandooo toda a cama, diga ai",
+    "Dia de skinCare com meu amor",
+    "Tão lindaaa de todo jeito",
+  ];
 
   const naogostaGatosImages = [
     require("../assets/não-gatos/cat1.jpg"),
@@ -159,6 +251,15 @@ export default function Menu() {
     require("../assets/não-gatos/cat4.jpg"),
     require("../assets/não-gatos/cat5.jpg"),
     require("../assets/não-gatos/cat6.jpg"),
+  ];
+
+  const naogostaGatosDescricoes = [
+    "Tava com dois gatin.",
+    "tava acanhada ainda.",
+    "Aqui esquece, ja não vive mais sem a savana.",
+    "Diga ai",
+    "Até dava tchauzin com eles.",
+    "Desde então..."
   ];
 
   const maesImages = [
@@ -171,6 +272,16 @@ export default function Menu() {
     require("../assets/uma-super-mae/mor7.jpg"),
   ];
 
+  const maesDescricoes = [
+    "Toda felizinha com sua sobrinha.",
+    "Olha a carinha de felicidade.",
+    "Amor, vamos fazer um.",
+    "as buxexinhas",
+    "Muito feliz, você tem um coração tão grande.",
+    "Toda cuidadosa",
+    "Já pensou nos ai."
+  ];
+
   const festaImages = [
     require("../assets/festinhas/festa1.jpg"),
     require("../assets/festinhas/festa2.jpg"),
@@ -180,6 +291,11 @@ export default function Menu() {
     require("../assets/festinhas/festa6.jpg"),
     require("../assets/festinhas/festa7.jpg"),
     require("../assets/festinhas/festa8.jpg"),
+  ];
+
+  const festasDescricoes = [
+    "Descrição do primeiro momento.",
+    "Descrição do segundo momento.",
   ];
 
   const comidasImages = [
@@ -204,6 +320,10 @@ export default function Menu() {
     require("../assets/comendinho/comendo19.jpg"),
     require("../assets/comendinho/comendo20.jpg"),
   ];
+  const comidasDescricoes = [
+    "Descrição do primeiro momento.",
+    "Descrição do segundo momento.",
+  ];
 
   const distanciasImages = [
     require("../assets/mesmo-distancia/dist1.jpg"),
@@ -219,6 +339,11 @@ export default function Menu() {
     require("../assets/mesmo-distancia/dist11.jpg"),
     require("../assets/mesmo-distancia/dist12.jpg"),
     require("../assets/mesmo-distancia/dist13.jpg"),
+  ];
+
+  const distanciasDescricoes = [
+    "Descrição do primeiro momento.",
+    "Descrição do segundo momento.",
   ];
 
   const desafiosImages = [require("../assets/desafios/desafio1.jpg")];
@@ -333,7 +458,7 @@ export default function Menu() {
 
         {currentPage === "primeirosMomentos" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Saindo juntos</Text>
+            <Text style={styles.title}>Primeiros encontros</Text>
             <Text style={styles.text}>
               Aqui está moemntos que estavamos nos conhecendos.
             </Text>
@@ -394,9 +519,7 @@ export default function Menu() {
         {currentPage === "viagens" && (
           <View style={styles.page}>
             <Text style={styles.title}>Nossas Viagens</Text>
-            <Text style={styles.text}>
-              Aqui estão alguns dos nossos destinos:
-            </Text>
+            <Text style={styles.text}>Lugares que conhecemos juntinhos:</Text>
             <View style={styles.buttonsGrid}>
               {nossasViagensImages.map((image, index) => (
                 <TouchableOpacity
@@ -414,16 +537,14 @@ export default function Menu() {
         )}
         {currentPage === "musicas" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
-            <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
-            </Text>
+            <Text style={styles.title}>Nossas musicas</Text>
+            <Text style={styles.text}>Nossas musicas favoritas:</Text>
             <View style={styles.buttonsGrid}>
               {maioresSaudadesImages.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image, "image")}
+                  onPress={() => openModal(image, [index])}
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
@@ -439,16 +560,18 @@ export default function Menu() {
         )}
         {currentPage === "momentos" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
+            <Text style={styles.title}>Momentos maluquinhosss</Text>
             <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
+              Aqui você pode ver alguns momentos maluquinhos que fizemos juntos.
             </Text>
             <View style={styles.buttonsGrid}>
               {momentosMalucosImages.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image, "image")}
+                  onPress={() =>
+                    openModal(image, momentosMalucosDescricoes[index])
+                  }
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
@@ -464,16 +587,18 @@ export default function Menu() {
         )}
         {currentPage === "gatos" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
+            <Text style={styles.title}>Nera tu que não gostava de gatos</Text>
             <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
+              Momentos de tu com os gatinhas se divertindo:
             </Text>
             <View style={styles.buttonsGrid}>
               {naogostaGatosImages.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image, "image")}
+                  onPress={() =>
+                    openModal(image, naogostaGatosDescricoes[index])
+                  }
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
@@ -489,16 +614,16 @@ export default function Menu() {
         )}
         {currentPage === "mae" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
+            <Text style={styles.title}>Super mãezona</Text>
             <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
+              Você toda bobinha querendo um bonquenin:
             </Text>
             <View style={styles.buttonsGrid}>
               {maesImages.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image, "image")}
+                  onPress={() => openModal(image, maesDescricoes[index])}
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
@@ -514,16 +639,14 @@ export default function Menu() {
         )}
         {currentPage === "festa" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
-            <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
-            </Text>
+            <Text style={styles.title}>Nossas festinhas juntinhos</Text>
+            <Text style={styles.text}>Nós bem loquinhos na festa:</Text>
             <View style={styles.buttonsGrid}>
               {festaImages.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image, "image")}
+                  onPress={() => openModal(image, festasDescricoes[index])}
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
@@ -539,16 +662,14 @@ export default function Menu() {
         )}
         {currentPage === "comida" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
-            <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
-            </Text>
+            <Text style={styles.title}>Comendinhos</Text>
+            <Text style={styles.text}>Matando o que está nos matando</Text>
             <View style={styles.buttonsGrid}>
               {comidasImages.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image, "image")}
+                  onPress={() => openModal(image, comidasDescricoes[index])}
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
@@ -564,16 +685,16 @@ export default function Menu() {
         )}
         {currentPage === "distancia" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
+            <Text style={styles.title}>Mesmo na distancia</Text>
             <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
+              Alguns de nossos melhores momentos mesmo a distancia
             </Text>
             <View style={styles.buttonsGrid}>
               {distanciasImages.map((image, index) => (
                 <TouchableOpacity
                   key={index}
                   style={styles.photoButton}
-                  onPress={() => openModal(image, "image")}
+                  onPress={() => openModal(image, distanciasDescricoes[index])}
                 >
                   <Text style={styles.buttonText}>Momento {index + 1}</Text>
                 </TouchableOpacity>
@@ -589,10 +710,8 @@ export default function Menu() {
         )}
         {currentPage === "desafios" && (
           <View style={styles.page}>
-            <Text style={styles.title}>Maiores Saudades</Text>
-            <Text style={styles.text}>
-              Clique em um dos momentos abaixo para ver a foto ou vídeo:
-            </Text>
+            <Text style={styles.title}>Nossos desafios</Text>
+            <Text style={styles.text}>Desafios que fizemos juntooss</Text>
             <View style={styles.buttonsGrid}>
               {desafiosImages.map((image, index) => (
                 <TouchableOpacity
